@@ -3,7 +3,8 @@ import React, { Component } from 'react';
 class Smart_Tracking extends Component {
   render() {
     return (
-      <div className="App">
+      <div className="PageContent">
+      <h1> Smart Tracking </h1>
       Aspose development team is happy to announce the monthly release of Aspose.Words for Java &.NET 14.6.0.  
       This month’s release containing over 115 useful new features, enhancements and bug fixes to the Aspose.Words
       products. The InsertHtml method of the DocumentBuilder class now allows developers to choose what formatting 

@@ -24,7 +24,7 @@ class App extends Component {
       <Navbar inverse collapseOnSelect>
   <Navbar.Header>
     <Navbar.Brand>
-      <a href="#iView Labs">iView</a>
+      <a href="/">iView</a>
     </Navbar.Brand>
     <Navbar.Toggle />
   </Navbar.Header>

@@ -31,3 +31,10 @@
     transform: rotate(360deg);
   }
 }
+
+.PageContent {
+  margin: 50px;
+  margin-top: 15px;
+  text-align: justify;
+  font-size: 20px;
+}
