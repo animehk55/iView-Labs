@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 
-import image1 from './images/1.jpg';
-import image2 from './images/2.jpg';
-import image3 from './images/3.JPG';
-import image4 from './images/4.jpg';
-import image5 from './images/5.png';
-import logo from './images/logo.png';
-import './App.css';
+import image1 from '../images/1.jpg';
+import image2 from '../images/2.jpg';
+import image3 from '../images/3.JPG';
+import image4 from '../images/4.jpg';
+import image5 from '../images/5.png';
+import logo from '../images/logo.png';
+import '../App.css';
 
 class Home extends Component {
   render() {

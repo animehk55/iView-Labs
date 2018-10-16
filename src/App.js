@@ -12,6 +12,7 @@ import { Navbar,
 import './App.css';
 
 import Smart_Tracking from './iView/Smart_Tracking';
+import Home from './iView/Home';
 
 class App extends Component {
   render() {
@@ -32,13 +33,13 @@ class App extends Component {
       <NavItem eventKey={2} href="#">
         Smart Travel
       </NavItem>
-    </Nav>
       <NavItem eventKey={3} href="#">
-        Loyalty Aggregator
+        Loyalty Aggrregator
       </NavItem>
       <NavItem eventKey={4} href="#">
         Smart HealthCare
       </NavItem>
+    </Nav>  
     <Nav pullRight>
       <NavItem eventKey={1} href="#">
         Login
@@ -54,7 +55,8 @@ class App extends Component {
 </Navbar>;
         <Router>
           <div>
-            <Route exact path="/Smart_Tracdfasfadsking_" component={ Smart_Tracking }/>
+            <Route exact path="/" component={ Home } />
+            <Route exact path="/Smart_Tracking" component={ Smart_Tracking }/>
           </div>
         </Router>
       </div>
