@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 
-class Smart_Travel extends Component {
+class Loyalty_Aggregator extends Component {
   render() {
     return (
       <div className="App">
-      Smart_Travel_
+      Smart_Aggregator_
       </div>
     );
   }
 }
 
-export default Smart_Travel;
+export default Loyalty_Aggregator;

@@ -30,16 +30,16 @@ class App extends Component {
   </Navbar.Header>
   <Navbar.Collapse>
     <Nav>
-      <NavItem eventKey={1} href="#">
+      <NavItem eventKey={1} href="/Smart_Tracking_">
         Smart Tracking
       </NavItem>
-      <NavItem eventKey={2} href="#">
+      <NavItem eventKey={2} href="/Smart_Travel_">
         Smart Travel
       </NavItem>
-      <NavItem eventKey={3} href="#">
+      <NavItem eventKey={3} href="/Loyalty_Aggregator_">
         Loyalty Aggrregator
       </NavItem>
-      <NavItem eventKey={4} href="#">
+      <NavItem eventKey={4} href="/Smart_Healthcare_">
         Smart HealthCare
       </NavItem>
     </Nav>  
@@ -55,13 +55,13 @@ class App extends Component {
       </NavItem>
     </Nav>
   </Navbar.Collapse>
-</Navbar>;
+</Navbar>
         <Router>
           <div>
             <Route exact path="/" component={ Home } />
             <Route exact path="/Smart_Tracking_" component={ Smart_Tracking } />
             <Route exact path="/Smart_Travel_" component={ Smart_Travel } />
-            <Route exact path="/Smart_Aggregator_" component={ Loyalty_Aggregator } />
+            <Route exact path="/Loyalty_Aggregator_" component={ Loyalty_Aggregator } />
             <Route exact path="/Smart_Healthcare_" component={ Smart_Healthcare } />
           </div>
         </Router>

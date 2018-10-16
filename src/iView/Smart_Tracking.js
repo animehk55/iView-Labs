@@ -4,7 +4,7 @@ class Smart_Tracking extends Component {
   render() {
     return (
       <div className="App">
-      hello
+      Smart_Tracking_
       </div>
     );
   }
