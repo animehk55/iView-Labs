@@ -1,16 +1,17 @@
 import React, { Component } from 'react';
+import{
+        BrowserRouter as Router,
+        Route
+      } from 'react-router-dom';
+
 import { Navbar,
          Nav,
-         NavItem,
-         NavDropdown,
-         MenuItem
+         NavItem
         } from 'react-bootstrap';
-import image1 from './images/1.jpg';
-import image2 from './images/2.jpg';
-import image3 from './images/3.JPG';
-import image4 from './images/4.jpg';
-import image5 from './images/5.png';
+
 import './App.css';
+
+import Smart_Tracking from './iView/Smart_Tracking';
 
 class App extends Component {
   render() {
@@ -31,13 +32,13 @@ class App extends Component {
       <NavItem eventKey={2} href="#">
         Smart Travel
       </NavItem>
+    </Nav>
       <NavItem eventKey={3} href="#">
         Loyalty Aggregator
       </NavItem>
       <NavItem eventKey={4} href="#">
         Smart HealthCare
       </NavItem>
-    </Nav>
     <Nav pullRight>
       <NavItem eventKey={1} href="#">
         Login
@@ -51,25 +52,11 @@ class App extends Component {
     </Nav>
   </Navbar.Collapse>
 </Navbar>;
-        <header className="App-header">
-         <img src={image1} alt="logo" width="100%" />
-         <img src={image2} alt="logo" width="100%" />
-         <img src={image3} alt="logo" width="100%" />
-         <img src={image4} alt="logo" width="100%" />
-         <img src={image5} alt="logo" width="100%" />
-          <img src={image1} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <Router>
+          <div>
+            <Route exact path="/Smart_Tracdfasfadsking_" component={ Smart_Tracking }/>
+          </div>
+        </Router>
       </div>
     );
   }
