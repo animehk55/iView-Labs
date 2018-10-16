@@ -16,6 +16,7 @@ import Smart_Travel from './iView/Smart_Travel';
 import Loyalty_Aggregator from './iView/Loyalty_Aggregator';
 import Smart_Healthcare from './iView/Smart_Healthcare';
 import Home from './iView/Home';
+import Login_Form from './Login/Login_Form';
 
 class App extends Component {
   render() {
@@ -44,7 +45,7 @@ class App extends Component {
       </NavItem>
     </Nav>  
     <Nav pullRight>
-      <NavItem eventKey={1} href="#">
+      <NavItem eventKey={1} href="/Login_Form">
         Login
       </NavItem>
       <NavItem eventKey={2} href="#">
@@ -58,6 +59,7 @@ class App extends Component {
 </Navbar>
         <Router>
           <div>
+          <Route exact path="/Login_Form" component={ Login_Form } />
             <Route exact path="/" component={ Home } />
             <Route exact path="/Smart_Tracking_" component={ Smart_Tracking } />
             <Route exact path="/Smart_Travel_" component={ Smart_Travel } />
