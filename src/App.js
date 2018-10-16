@@ -12,6 +12,9 @@ import { Navbar,
 import './App.css';
 
 import Smart_Tracking from './iView/Smart_Tracking';
+import Smart_Travel from './iView/Smart_Travel';
+import Loyalty_Aggregator from './iView/Loyalty_Aggregator';
+import Smart_Healthcare from './iView/Smart_Healthcare';
 import Home from './iView/Home';
 
 class App extends Component {
@@ -56,7 +59,10 @@ class App extends Component {
         <Router>
           <div>
             <Route exact path="/" component={ Home } />
-            <Route exact path="/Smart_Tracking" component={ Smart_Tracking }/>
+            <Route exact path="/Smart_Tracking_" component={ Smart_Tracking } />
+            <Route exact path="/Smart_Travel_" component={ Smart_Travel } />
+            <Route exact path="/Smart_Aggregator_" component={ Loyalty_Aggregator } />
+            <Route exact path="/Smart_Healthcare_" component={ Smart_Healthcare } />
           </div>
         </Router>
       </div>
