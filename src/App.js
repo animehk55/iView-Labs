@@ -1,16 +1,22 @@
 import React, { Component } from 'react';
+import{
+        BrowserRouter as Router,
+        Route
+      } from 'react-router-dom';
+
 import { Navbar,
          Nav,
-         NavItem,
-         NavDropdown,
-         MenuItem
+         NavItem
         } from 'react-bootstrap';
-import image1 from './images/1.jpg';
-import image2 from './images/2.jpg';
-import image3 from './images/3.JPG';
-import image4 from './images/4.jpg';
-import image5 from './images/5.png';
+
 import './App.css';
+
+import Smart_Tracking from './iView/Smart_Tracking';
+import Smart_Travel from './iView/Smart_Travel';
+import Loyalty_Aggregator from './iView/Loyalty_Aggregator';
+import Smart_Healthcare from './iView/Smart_Healthcare';
+import Home from './iView/Home';
+import Login_Form from './Login/Login_Form';
 
 class App extends Component {
   render() {
@@ -19,27 +25,27 @@ class App extends Component {
       <Navbar inverse collapseOnSelect>
   <Navbar.Header>
     <Navbar.Brand>
-      <a href="#iView Labs">iView</a>
+      <a href="/">iView</a>
     </Navbar.Brand>
     <Navbar.Toggle />
   </Navbar.Header>
   <Navbar.Collapse>
     <Nav>
-      <NavItem eventKey={1} href="#">
+      <NavItem eventKey={1} href="/Smart_Tracking_">
         Smart Tracking
       </NavItem>
-      <NavItem eventKey={2} href="#">
+      <NavItem eventKey={2} href="/Smart_Travel_">
         Smart Travel
       </NavItem>
-      <NavItem eventKey={3} href="#">
-        Loyalty Aggregator
+      <NavItem eventKey={3} href="/Loyalty_Aggregator_">
+        Loyalty Aggrregator
       </NavItem>
-      <NavItem eventKey={4} href="#">
+      <NavItem eventKey={4} href="/Smart_Healthcare_">
         Smart HealthCare
       </NavItem>
-    </Nav>
+    </Nav>  
     <Nav pullRight>
-      <NavItem eventKey={1} href="#">
+      <NavItem eventKey={1} href="/Login_Form">
         Login
       </NavItem>
       <NavItem eventKey={2} href="#">
@@ -50,26 +56,17 @@ class App extends Component {
       </NavItem>
     </Nav>
   </Navbar.Collapse>
-</Navbar>;
-        <header className="App-header">
-         <img src={image1} alt="logo" width="100%" />
-         <img src={image2} alt="logo" width="100%" />
-         <img src={image3} alt="logo" width="100%" />
-         <img src={image4} alt="logo" width="100%" />
-         <img src={image5} alt="logo" width="100%" />
-          <img src={image1} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+</Navbar>
+        <Router>
+          <div>
+          <Route exact path="/Login_Form" component={ Login_Form } />
+            <Route exact path="/" component={ Home } />
+            <Route exact path="/Smart_Tracking_" component={ Smart_Tracking } />
+            <Route exact path="/Smart_Travel_" component={ Smart_Travel } />
+            <Route exact path="/Loyalty_Aggregator_" component={ Loyalty_Aggregator } />
+            <Route exact path="/Smart_Healthcare_" component={ Smart_Healthcare } />
+          </div>
+        </Router>
       </div>
     );
   }
