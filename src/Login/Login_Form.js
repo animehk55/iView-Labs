@@ -1,29 +1,67 @@
 import React, { Component } from "react";
 import { 
-        Form,
         FormGroup,
         Col,
         ControlLabel,
         FormControl,
         Checkbox,
-        Button
+        Button,
+        // HelpBlock
  } from "react-bootstrap";
+ 
+ class Login_Form extends React.Component {
+    constructor(props, context) {
+      super(props, context);
+  
+      this.handleChange = this.handleChange.bind(this);
+  
+      this.state = {
+        value: ''
+      };
+    }
+  
+    getValidationState() {
+      const length = this.state.value.length;
+      if (length > 10) return 'success';
+      else if (length > 5) return 'warning';
+      else if (length > 0) return 'error';
+      return null;
+    }
 
-class Login_Form extends Component {
-  render() {
-    return (
-        <div className="Login">
-      <Form horizontal>
-        <FormGroup controlId="formHorizontalEmail">
-            <Col componentClass={ControlLabel} sm={2}>
-            Email
+    getEmailValidationState() {
+        
+    }
+  
+    handleChange(e) {
+      this.setState({ value: e.target.value });
+    }
+  
+    render() {
+      return (
+        <form className="Login">
+          <FormGroup
+            controlId="formBasicText"
+            validationState={this.getValidationState()}
+          >
+          <Col componentClass={ControlLabel} sm={2}>
+            Name
+          </Col>
+          <Col sm={10}>
+            <FormControl
+              type="text"
+              value={this.state.value}
+              placeholder="Enter text"
+              onChange={this.handleChange}
+            />
+            <FormControl.Feedback />
+            
             </Col>
-            <Col sm={10}>
-            <FormControl type="email" placeholder="Email" />
-            </Col>
-        </FormGroup>
-
-        <FormGroup controlId="formHorizontalPassword">
+          </FormGroup>
+<br />
+        <FormGroup 
+            controlId="formHorizontalPassword"
+            validationState={this.getValidationState()}
+        >
             <Col componentClass={ControlLabel} sm={2}>
             Password
             </Col>
@@ -43,10 +81,9 @@ class Login_Form extends Component {
             <Button type="submit">Sign in</Button>
             </Col>
         </FormGroup>
-    </Form>;
-      </div>
-    );
+        </form>
+      );
+    }
   }
-}
 
 export default Login_Form;
