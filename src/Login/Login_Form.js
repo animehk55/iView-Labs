@@ -44,13 +44,13 @@ import {
             validationState={this.getValidationState()}
           >
           <Col componentClass={ControlLabel} sm={2}>
-            Name
+            Email
           </Col>
           <Col sm={10}>
             <FormControl
-              type="text"
+              type="Email"
               value={this.state.value}
-              placeholder="Enter text"
+              placeholder="Email"
               onChange={this.handleChange}
             />
             <FormControl.Feedback />
@@ -67,12 +67,6 @@ import {
             </Col>
             <Col sm={10}>
             <FormControl type="password" placeholder="Password" />
-            </Col>
-        </FormGroup>
-
-        <FormGroup>
-            <Col smOffset={2} sm={10}>
-            <Checkbox>Remember me</Checkbox>
             </Col>
         </FormGroup>
 
